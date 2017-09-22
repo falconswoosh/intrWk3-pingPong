@@ -1,4 +1,5 @@
 //Business Interface
+//Global variables
   var exceptionDivisors = [15,5,3];
   var exceptionTexts = ["ping-pong","pong","ping"];
 //Accept only positive integers. Return positve integer greater than zero
@@ -8,12 +9,12 @@ var positiveInteger = function(number){
   }
 };
 //Create new array from 1 to the user input number.
-var createArray = function(number) {
-  var startArray = [];
-  for (var i=1; i<=number; i++){
-    startArray.push(i);
+var tempArray = function(number) {
+  for (var i=1; i<=number; i++) {
+    tempArray.push(i);
   }
-  return startArray;
+  return tempArray;
+//
 };
 //TODO: test for blanks
 // var transformedOutput = function(input) {
@@ -48,8 +49,8 @@ var createArray = function(number) {
 $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
-    var input = $("#number").val();
-    var result = transformedOutput(input);
+    var number = $("#number").val();
+    // var result = transformedOutput(input);
     $("#output").text(""); //Clear output section
     $("#output").show();
       for (var i = 0; i < outputArray.length; i++) {
