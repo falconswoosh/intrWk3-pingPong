@@ -1,16 +1,17 @@
 //Business Interface
-var exceptionTexts = ["ping","pong","ping-pong"];
+
 
 //TODO: test for blanks
 var transformedOutput = function(input) {
   var exceptionDivisors = [3,5,15];
+  var exceptionTexts = ["ping","pong","ping-pong"];
   for (index=0; index < input.length; index++) {
-    if (input % exceptionDivisors[index] == 0) {
-      return "Hi";
-    } else if (input % exceptionDivisors[index] == 0) {
-      return "Hello";
-    } else if (input % exceptionDivisors[index] == 0) {
-      return "How are you?";
+    if (input % exceptionDivisors[index] === 0) {
+      return exceptionTexts[index];
+    } else if ((input.length > 1) && (input % exceptionDivisors[index] === 0)) {
+      return exceptionTexts[index];
+    } else if (input % exceptionDivisors[index] === 0) {
+      return exceptionTexts[index];
     }
   }
 }
