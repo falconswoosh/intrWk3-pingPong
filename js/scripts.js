@@ -10,12 +10,15 @@ var transformedOutput = function(input) {
     if ((input.length > 1) && (input % exceptionDivisors[index] === 0)) {
       var newNumber = numberToDecrement--
       return exceptionTexts[index];
-    } else if ((input.length > 1) && (input % exceptionDivisors[index] === 0)) {
+    } else if ((input.length >= 1) && (input % exceptionDivisors[index] === 0)) {
+      var newNumber = numberToDecrement--
       return exceptionTexts[index];
     } else if (input % exceptionDivisors[index] === 0) {
+      var newNumber = numberToDecrement--
       return exceptionTexts[index];
     } else {
-      return
+      var newNumber = numberToDecrement--
+      return "No exceptions"
     }
   }
 }
