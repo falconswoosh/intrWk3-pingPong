@@ -19,6 +19,11 @@ This website is our second project for the Introduction to Programming. To assis
     * For example, if your editor is [Atom](https://flight-manual.atom.io/getting-started/sections/installing-atom/), issue the following in your bash:
     $ Atom index.html
 
+## Specifications    
+    | Behavior | Input | Output |
+    |---|---|---|
+    | Accepts a number input from the user. | 1 | 1 |
+    | It can count up to the provided number. | 2 | [1,2] |
 
 ## Known Bugs
 
