@@ -22,14 +22,13 @@ This website is our second project for the Introduction to Programming. To assis
 ## Specifications    
 | Behavior | Input | Output |
 |---|---|---|
-| It can count up to the provided number. | 1 | 1 |
-| Accepts a number input from the user. | 2 | [1,2] |
-| Display on screen 1 to the number chosen. | 4 | [1, 2, 3, 4]|
-|| 1 | 1 |
+| It can count up to the provided number. | 1 | [1,2] |
+| Accepts a number input from the user. | 2<br />1 | [1,2]<br />1 |
+| Display on screen 1 to the number chosen. | 4<br />1 | [1, 2, 3, 4]<br />[1]|
 | Exception: display on screen "ping" replacing numbers divisible by 3 | 6 | ping |
 | Exception: display on screen "pong" replacing numbers divisible by 5 | 10 | pong |
 | Exception: display on screen "ping-pong" replacing numbers divisible by 15 | 30 | ping-pong |
-|A user should be able to enter a new number and see new results over and over again. |something here | something here |
+|A user should be able to enter a new number and see new results over and over again. | 2<br />4<br />6 | [1,2]<br />[1,2,3,4]<br />[1,2,3,4,5,6] |
 
 
 ## Known Bugs
