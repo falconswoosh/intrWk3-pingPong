@@ -5,20 +5,22 @@
 var transformedOutput = function(input) {
   var exceptionDivisors = [15,5,3];
   var exceptionTexts = ["ping-pong","pong","ping"];
-  var numberToDecrement = input
+  var numberToDecrement = input;
   for (index=0; index < numberToDecrement; index--) {
     if ((input.length > 1) && (input % exceptionDivisors[index] === 0)) {
-      var newNumber = numberToDecrement--
+      var newNumber = numberToDecrement--;
+      alert("input.length: " + input.length)
+      alert("newNumber: " + newNumber);
       return exceptionTexts[index];
-    } else if ((input.length >= 1) && (input % exceptionDivisors[index] === 0)) {
-      var newNumber = numberToDecrement--
+    } else if ((input.length = 1) && (input % exceptionDivisors[index] === 0)) {
+      var newNumber = numberToDecrement--;
       return exceptionTexts[index];
     } else if (input % exceptionDivisors[index] === 0) {
-      var newNumber = numberToDecrement--
+      var newNumber = numberToDecrement--;
       return exceptionTexts[index];
     } else {
-      var newNumber = numberToDecrement--
-      return "No exceptions"
+      var newNumber = numberToDecrement--;
+      return newNumber;
     }
   }
 }
@@ -40,5 +42,6 @@ $(document).ready(function() {
     var result = transformedOutput(input);
     $("#output").text(result);
     $("#output").show();
+    $("#list").append("<li>" + result + "</li>");
     });
 });
