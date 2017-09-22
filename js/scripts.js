@@ -2,32 +2,43 @@
 
 
 //TODO: test for blanks
+// var transformedOutput = function(input) {
+//   var exceptionDivisors = [15,5,3];
+//   var exceptionTexts = ["ping-pong","pong","ping"];
+//   // var numberToDecrement = input;
+//
+//   for (index=0; index < numberToDecrement; index--) {
+//     if ((input.length > 1) && (input % exceptionDivisors[index] === 0)) {
+//       var newNumber = numberToDecrement--;
+//       alert("input.length: " + input.)
+//       alert("newNumber: " + newNumber);
+//       return exceptionTexts[index];
+//     } else if ((input.length = 1) && (input % exceptionDivisors[index] === 0)) {
+//       var newNumber = numberToDecrement--;
+//       return exceptionTexts[index];
+//     } else if (input % exceptionDivisors[index] === 0) {
+//       var newNumber = numberToDecrement--;
+//       return exceptionTexts[index];
+//     } else {
+//       var newNumber = numberToDecrement--;
+//       return newNumber;
+//     }
+//   }
+// }
 var transformedOutput = function(input) {
-  var exceptionDivisors = [15,5,3];
-  var exceptionTexts = ["ping-pong","pong","ping"];
-  var numberToDecrement = input;
-  for (index=0; index < numberToDecrement; index--) {
-    if ((input.length > 1) && (input % exceptionDivisors[index] === 0)) {
-      var newNumber = numberToDecrement--;
-      alert("input.length: " + input.length)
-      alert("newNumber: " + newNumber);
-      return exceptionTexts[index];
-    } else if ((input.length = 1) && (input % exceptionDivisors[index] === 0)) {
-      var newNumber = numberToDecrement--;
-      return exceptionTexts[index];
-    } else if (input % exceptionDivisors[index] === 0) {
-      var newNumber = numberToDecrement--;
-      return exceptionTexts[index];
-    } else {
-      var newNumber = numberToDecrement--;
-      return newNumber;
-    }
+  var decrementedNumber = input;
+  var outputArray = []
+  if (decrementedNumber === input) {
+    outputArray.push(numberToDecrement)
+    alert(numberToDecrement)
+    return numberToDecrement
+    } else if (decrementedNumber != 0) {
+    decrementedNumber = decrementedNumber--
+    outputArray.push(numberToDecrement)
+    alert(numberToDecrement)
+    return numberToDecrement
   }
 }
-
-
-
-
 
 
 
