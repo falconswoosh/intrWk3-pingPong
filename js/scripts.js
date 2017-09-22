@@ -1,6 +1,20 @@
 //Business Interface
-
-
+  var exceptionDivisors = [15,5,3];
+  var exceptionTexts = ["ping-pong","pong","ping"];
+//Accept only positive integers. Return positve integer greater than zero
+var positiveInteger = function(number){
+  if (number <= 0){
+    return "Try again.  Please enter an integer greater than 0."
+  }
+};
+//Create new array from 1 to the user input number.
+var createArray = function(number) {
+  var startArray = [];
+  for (var i=1; i<=number; i++){
+    startArray.push(i);
+  }
+  return startArray;
+};
 //TODO: test for blanks
 // var transformedOutput = function(input) {
 //   var exceptionDivisors = [15,5,3];
@@ -25,20 +39,7 @@
 //     }
 //   }
 // }
-var transformedOutput = function(input) {
-  var decrementedNumber = input;
-  var outputArray = []
-  if (decrementedNumber === input) {
-    outputArray.push(numberToDecrement)
-    alert(numberToDecrement)
-    return numberToDecrement
-    } else if (decrementedNumber != 0) {
-    decrementedNumber = decrementedNumber--
-    outputArray.push(numberToDecrement)
-    alert(numberToDecrement)
-    return numberToDecrement
-  }
-}
+
 
 
 
@@ -47,12 +48,12 @@ var transformedOutput = function(input) {
 $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
-    // var input = parseInt($("#number").val());
-    // BI: alert wasn't working for input.length due to ParseInit;
     var input = $("#number").val();
     var result = transformedOutput(input);
-    $("#output").text(result);
+    $("#output").text(""); //Clear output section
     $("#output").show();
-    $("#list").append("<li>" + result + "</li>");
+      for (var i = 0; i < outputArray.length; i++) {
+        $("#output").prepend("<li>"+outputArray[i]+"</li>");
+      }
     });
 });
