@@ -10,10 +10,10 @@ var transformedOutput = function(number) {
   // var exceptIndex = 0;
   var newNumber = number;
   // var outputArray = [];
-alert("start");
-alert("Input number is: " + number);
-alert("number length: " + number.length);
-  for (var index=0; index <= number; index++) {
+// alert("start");
+// alert("Input number is: " + number);
+// alert("number length: " + number.length);
+  for (var index=0; index < number; index++) {
     if ((number.length >= 2) && (exceptIndex < 3) && (newNumber != 0) && (number % exceptDivisors[exceptIndex] === 0)) {
         alert("Logic1");
         outputArray.push(exceptTxts[exceptIndex]);
@@ -22,7 +22,7 @@ alert("number length: " + number.length);
         alert("Logic1 this is the outputArray: " + outputArray + " eIndex: " + exceptIndex);
         alert("Txt: " + exceptTxts[exceptIndex]);
         // return exceptTxts[exceptIndex]; //temporary test
-      } else if ((exceptIndex < 3) && (newNumber > 0) && (number % exceptDivisors[exceptIndex] === 0)) {
+      } else if ((number.length <= 1) && (exceptIndex < 3) && (newNumber > 0) && (number % exceptDivisors[exceptIndex] === 0)) {
         outputArray.push(exceptTxts[exceptIndex]);
         exceptIndex = exceptIndex++;
         newNumber = newNumber--;
@@ -32,7 +32,7 @@ alert("number length: " + number.length);
         outputArray.push(newNumber);
         exceptIndex = 0;
         newNumber = newNumber--;
-      } else if (newNumber === 0) {
+      } else {
         alert("Logic2 this is the outputArray: " + outputArray + " eIndex: " + exceptIndex);
         return outputArray;
 alert("end");
