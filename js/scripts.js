@@ -4,21 +4,29 @@ var transformedOutput = function(number) {
   var exceptDivisors = [15,5,3];
   var exceptTxts = ["ping-pong","pong","ping"];
   var exceptIndex = 0;
+  var newNumber = 0
   var outputArray = [];
-alert("start")
-alert(number)
-  for (index=number; index < number; index--) {
+alert("start");
+alert("Input number is: " + number);
+  for (index=newNumber; index <= newNumber; index--) {
     if ((number.length > 1) && (number % exceptDivisors[exceptIndex] === 0)) {
         outputArray.push(exceptTxts[exceptIndex]);
         exceptIndex = exceptIndex++
-        alert("Logic1 this is the outputArray: " + outputArray + "eIndex: " + exceptIndex);
+        newNumber = newNumber--
+        alert("Logic1 this is the outputArray: " + outputArray + " eIndex: " + exceptIndex);
         alert("Txt: " + exceptTxts[exceptIndex]);
+      } else if (exceptIndex === 3) {
+        exceptIndex = 0
         // return exceptTxts[exceptIndex]; //temporary test
       } else if (number % exceptDivisors[exceptIndex] === 0) {
         outputArray.push(exceptTxts[exceptIndex]);
         exceptIndex = exceptIndex++
-        alert("Logic2 this is the outputArray: " + outputArray + "eIndex: " + exceptIndex);
+        newNumber = newNumber--
+        alert("Logic2 this is the outputArray: " + outputArray + " eIndex: " + exceptIndex);
         alert("Txt: " + exceptTxts[exceptIndex]);
+      } else if (exceptIndex === 3) {
+        exceptIndex = 0
+        outputArray.push(newNumber);
         // return exceptTxts[exceptIndex]; //temporary test
       // } else if (input % exceptDivisors[index] === 0) {
       //   var newNumber = numberToDecrement--;
