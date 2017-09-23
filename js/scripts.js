@@ -1,51 +1,50 @@
 //Business Interface
 var exceptDivisors = [15,5,3];
 var exceptTxts = ["ping-pong","pong","ping"];
-var exceptIndex = 0;
-// var newNumber = number;
-var outputArray = [];
-var transformedOutput = function(number) {
-  // var exceptDivisors = [15,5,3];
-  // var exceptTxts = ["ping-pong","pong","ping"];
-  // var exceptIndex = 0;
-  var newNumber = number;
-  // var outputArray = [];
-// alert("start");
-// alert("Input number is: " + number);
-// alert("number length: " + number.length);
-  for (var index=0; index < number; index++) {
-    if ((number.length >= 2) && (exceptIndex < 3) && (newNumber != 0) && (number % exceptDivisors[exceptIndex] === 0)) {
-        alert("Logic1");
-        outputArray.push(exceptTxts[exceptIndex]);
-        exceptIndex = exceptIndex++;
-        newNumber = newNumber--;
-        alert("Logic1 this is the outputArray: " + outputArray + " eIndex: " + exceptIndex);
-        alert("Txt: " + exceptTxts[exceptIndex]);
-        // return exceptTxts[exceptIndex]; //temporary test
-      } else if ((number.length <= 1) && (exceptIndex < 3) && (newNumber > 0) && (number % exceptDivisors[exceptIndex] === 0)) {
-        outputArray.push(exceptTxts[exceptIndex]);
-        exceptIndex = exceptIndex++;
-        newNumber = newNumber--;
-        alert("Logic2 this is the outputArray: " + outputArray + " eIndex: " + exceptIndex);
-        alert("Txt: " + exceptTxts[exceptIndex]);
-      } else if ((exceptIndex < 3) && newNumber > 0) {
-        outputArray.push(newNumber);
-        exceptIndex = 0;
-        newNumber = newNumber--;
-      } else {
-        alert("Logic2 this is the outputArray: " + outputArray + " eIndex: " + exceptIndex);
-        return outputArray;
-alert("end");
+//Array to store input number decrementing to 1
+var inputToArray=function(numbers) {
+  var tmpArray=[];
+  for (var index=1; index<number; index++) {
+    tmpArray.push(index);
+  };
+  return tmpArray;
+};
+// Array to input tmpArrays and replace those defined as exceptions with certain text.
+var transformOutput = function(array) {
+  var transformArray = [];
+  array.forEach(function(number) {
+    if (number % exceptDivisors[0] === 0) {
+      transformArray.push("ping-pong");
+    } else if {
+      (number % exceptDivisors[1] === 0);
+      transformArray.push(exceptTxts[1]);
+    } else if {
+      (number % exceptDivisors[2] === 0);
+      transformArray.push(exceptTxts[2]);
+    } else {
+      transformArray.push(number);
+        alert(transformArray);
     }
-  }
-}
+  return transformArray;
+  });
+};
 
-
-
-
-
-
-
+//test
+// var tranformOutput = tmpArray.map(function(number) {
+//   if (number % exceptDivisors[0] === 0) {
+//     transformArray.push(exceptTxts[0]);
+//   } else if {
+//     (number % exceptDivisors[1] === 0);
+//     transformArray.push(exceptTxts[1]);
+//   } else if {
+//     (number % exceptDivisors[2] === 0);
+//     transformArray.push(exceptTxts[2]);
+//   } else if {
+//     transformArray.push(number);
+// });
+// alert(transformOutput);
+// return tranformOutput
+// };
 
 //User Interface
 $(document).ready(function() {
@@ -53,11 +52,13 @@ $(document).ready(function() {
     event.preventDefault();
     var number = $("#number").val();
     var result = transformedOutput(number);
-    var cloneArray = outputArray.slice();
-    // $("#output").text(""); //Clear output section
-		for (var i=0; i<cloneArray.length;i++) {
+		for (var i=0; i<outputArray.length;i++) {
       $("#output").show();
-  		$("#list").prepend("<li>"+cloneArray[i]+"</li>");
+  		$("#list").prepend("<li>"+result[i]+"</li>");
     }
+//Clear output
+    $("#clearScreen").click(function() {
+      location.reload();
+    });
   });
 });
