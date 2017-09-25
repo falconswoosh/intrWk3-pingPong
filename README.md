@@ -6,14 +6,14 @@
 
 ## Description
 
-This website is our second project for the Introduction to Programming. To assist the potential student, this site asks that the user respond to a series of questions or preferences and based on their input, the site will respond with suggested Epicodus tracks for consideration.
+This website is our third project for the Introduction to Programming. The site asks the user to input a number and outputs interesting results.
 
 ## Setup/Installation Requirements
 
-* You may view this project at: https://github.com/falconswoosh/intrWk3-pingPong
+* You may view this project at: https://falconswoosh.github.io/intrWk3-pingPong/
 * This project may be cloned from:  https://github.com/falconswoosh/intrWk3-pingPong.git
 * Clone to your local system
-* Open the project folder "intrWk2-pingPong"
+* Open the project folder "intrWk3-pingPong"
 * Open the index.html in your browser to execute its contents
 * You may use your editor-of-choice to edit and modify it.
     * For example, if your editor is [Atom](https://flight-manual.atom.io/getting-started/sections/installing-atom/), issue the following in your bash:
@@ -24,11 +24,12 @@ This website is our second project for the Introduction to Programming. To assis
 |---|---|---|
 | It can count up to the provided number. | 1 | [1,2] |
 | Accepts a number input from the user. | 2<br />1 | [1,2]<br />1 |
-| Display on screen 1 to the number chosen. | 4<br />1 | [1, 2, 3, 4]<br />[1]|
+| Display on screen 1 to the number chosen. | 4<br />1 | [1, 2, ping, 4]<br />[1]|
 | Exception: display on screen "ping" replacing numbers divisible by 3 | 6 | ping |
 | Exception: display on screen "pong" replacing numbers divisible by 5 | 10 | pong |
 | Exception: display on screen "ping-pong" replacing numbers divisible by 15 | 30 | ping-pong |
-|A user should be able to enter a new number and see new results over and over again. | 2<br />4<br />6 | [1,2]<br />[1,2,3,4]<br />[1,2,3,4,5,6] |
+|A user should be able to enter a new number and see new results over and over again. | 2<br />4<br />15 | [1,2]<br />[1,2,ping,4]<br />[1,2,ping,4,pong,ping,7,8,ping,pong,11,ping,13,14,ping-pong] |
+|Ability to clear previous output| click | display area is cleared |
 
 
 ## Known Bugs
@@ -54,4 +55,4 @@ Alan Falcon email: [falconswoosh@gmail.com](falconswoosh@gmail.com)
 ### License
 * All rights reserved for technologies utilized.
 
-Copyright (c) 2016 **_{Epicodus}_**
+Copyright (c) 2016 **_{MIT}_**

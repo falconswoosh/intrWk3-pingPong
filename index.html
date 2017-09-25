@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="Input a number and see numbers before your number choice display on the screen with fun exceptions. View the README.md file for details. ">
+    <meta name="description" content="Input a number and see interesting results. View the README.md file for details. ">
     <meta name="keywords" content="Ping-pong">
     <meta name="author" content="Alan Falcon">
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
@@ -13,17 +13,24 @@
   </head>
   <body>
     <h1>Ping-Pong</h1>
-      <p><em>Rules:</em></p>
-      <p>Ping Pong will count down to your number from 1 with the following exceptions:</p>
+      <br>
+      <br>
+      <h2>Let's Play!</h2>
+      <p><b>Rules:</b></p>
+      <p>Ping-Pong will count down to your number from 1 with the following exceptions:</p>
       <ol>
         <li>Numbers divisible by 3 become "ping"</li>
         <li>Numbers divisible by 5 become "pong"</li>
         <li>Numbers divisible by 3 and 5 become "ping-pong"</li>
       </ol>
+      <br>
       <form>
+        <div class = "controls">
         <input id="number" type="text" placeholder="Enter a number">
+        <span class="help-inline"></span>
         <button type="submit" class="btn btn-success">Ping Pong!</button>
         <button id="clearScreen" class="btn btn-danger" type="click">Reset</button>
+        </div>
       </form>
       <div id="output">
         <ul id="list">
